@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'oktoih/css/base.css' %}">
+</head>
+<body>
+    <div class="main">
+        <div class="right"></div>
+        <div class="content">
+            {% block content %}{% endblock %}
+            <div class="nav">
+                <ul id="pagination">
+                    {% for number in paginator.page_range %}
+                    <li><a href="?page={{ number }}">{{ number }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="left"></div>
+    </div>
+    <footer class="footer">
+        <button class="button">
+        <a href="{% url 'message' %}" style="color: black;">Написать автору сайта</a>
+        </button>
+    </footer>
+</body>
+</html>

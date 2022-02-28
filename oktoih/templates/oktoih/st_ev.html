@@ -1,0 +1,9 @@
+{% extends 'oktoih/base.html' %}
+{% block title %}
+    Евангельские стихиры
+{% endblock %}
+{% block content %}
+    {% for evang in page_obj %}
+        <article>{{ evang.st_ev|safe }}<br></article>
+    {% endfor %}
+{% endblock %}

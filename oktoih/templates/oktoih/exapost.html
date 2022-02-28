@@ -1,0 +1,9 @@
+{% extends 'oktoih/base.html' %}
+{% block title %}
+    Воскресные эксапостиларии
+{% endblock %}
+{% block content %}
+    {% for evang in page_obj %}
+        <article>{{ evang.exapost|safe }}<br></article>
+    {% endfor %}
+{% endblock %}

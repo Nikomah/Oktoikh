@@ -1,0 +1,21 @@
+
+ th, td {
+    font-size: 18px !important;
+    }
+
+
+.mini {
+font-size: 14px;
+}
+.addlink, .changelink {
+font-size: 16px !important;
+}
+
+#recent-actions-module  {
+width: 500px;
+padding-bottom: 10px;
+background-color: #eee !important;
+}
+#content-related {
+background: none;
+}

@@ -1,0 +1,9 @@
+{% extends 'oktoih/base.html' %}
+{% block title %}
+    Воскресные Евангелия
+{% endblock %}
+{% block content %}
+        {% for obj in object_list %}
+            <article>{{ obj.evang|safe }}<br></article>
+        {% endfor %}
+{% endblock %}

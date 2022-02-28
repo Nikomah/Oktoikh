@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отправка сообщения</title>
+</head>
+<body>
+    <h3>Заполните форму:</h3>
+    <form action="{% url 'message' %}" method="post" style="margin: auto;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
