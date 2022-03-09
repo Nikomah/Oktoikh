@@ -3,14 +3,17 @@
 <html lang="en" class="printsize">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>{{ voice }}</title>
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'oktoih/css/voice_mobile.css' %}">
     <link rel="stylesheet" href="{% static 'oktoih/css/voices.css' %}">
     <link rel="stylesheet" type="text/css" media="print" href="{% static 'oktoih/css/print.css' %}">
+
     <script src="{% static 'oktoih/js/voice.js' %}"></script>
 </head>
 <body class="printsize">
-    <header class="header noprint">
+    <header id="header" class="header noprint">
         <h1 style="padding-top: 15px; padding-left: 50px; text-align: left; font-size: 40px; font-weight: 100;
                     font-family: 'Hirmos ieUcs';">{{ voice }}</h1>
     </header>
@@ -50,6 +53,32 @@
         </div>
 
         <div class="middlepane printsize">
+
+                <input type="checkbox" id="burger">
+                <label for="burger"></label>
+                <nav>
+                    <ul>
+                        <li style="font-size: 1.2em"><a href="#vel-ect">Великая ектения</a></li>
+                        <li style="font-size: 1.2em"><a href="#kaphism">Кафизма</a></li>
+                        <li style="font-size: 1.2em"><a href="#vozzvah">Господи воззвах</a></li>
+                        <li style="font-size: 1.2em"><a href="#st-vozzvah">Стихиры на Господи воззвах</a></li>
+                        <li style="font-size: 1.2em"><a href="#svet">Свете тихий</a></li>
+                        <li style="font-size: 1.2em"><a href="#ect-pros">Ектения просительная</a></li>
+                        <li style="font-size: 1.2em"><a href="#st-stih">Стихиры на стиховне</a></li>
+                        <li style="font-size: 1.2em"><a href="#nyne-otp">Ныне отпущаеши</a></li>
+                        <li style="font-size: 1.2em"><a href="#six-psalm">Шестопсалмие</a></li>
+                        <li style="font-size: 1.2em"><a href="#vel-ect-u">Великая ектения</a></li>
+                        <li style="font-size: 1.2em"><a href="#tropar">Тропарь воскресный</a></li>
+                        <li style="font-size: 1.2em"><a href="#poly">Полиелей</a></li>
+                        <li style="font-size: 1.2em"><a href="#evang">Евангелие</a></li>
+                        <li style="font-size: 1.2em"><a href="#canon">Канон</a></li>
+                        <li style="font-size: 1.2em"><a href="#kondac">Кондак</a></li>
+                        <li style="font-size: 1.2em"><a href="#pesn-bg">Песнь Богородицы</a></li>
+                        <li style="font-size: 1.2em"><a href="#st_hv">Стихиры на хвалитех</a></li>
+                        <li style="font-size: 1.2em"><a href="#vel_sl">Великое славословие</a></li>
+                    </ul>
+                </nav>
+
             <main id="content" class="noprintborder">
                 <a name="top"></a>
                 <h2 class="h2fontsize noscreen">{{ voice }}</h2>
@@ -721,15 +750,7 @@
                 <p style="text-align: center"><span style="color: red;">Конeцъ пeрвагw часA.</span></p><hr>
 
             </main>
-            <nav id="nav" class="noprint">
-                <ul id="pagination">
-                    <li><a class="all-link" href="#">1</a> </li>
-                    <li><a class="all-link"  href="#">2</a> </li>
-                    <li><a class="all-link"  href="#">3</a> </li>
-                    <li><a class="all-link"  href="#">4</a> </li>
-                    <li><a class="all-link"  href="#">5</a> </li>
-                </ul>
-            </nav>
+
         </div>
 
         <div class="rightpane noprint">
