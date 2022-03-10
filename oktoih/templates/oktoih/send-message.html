@@ -1,15 +1,22 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{% static 'oktoih/css/send_message.css' %}">
     <title>Отправка сообщения</title>
 </head>
 <body>
-    <h3>Заполните форму:</h3>
-    <form action="{% url 'message' %}" method="post" style="margin: auto;">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Отправить</button>
-    </form>
+    <header>
+        <h3 class="h">Заполните форму:</h3>
+    </header>
+    <div class="form">
+        <form class="form" action="{% url 'message' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
 </body>
 </html>
